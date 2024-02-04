@@ -46,6 +46,9 @@ function createCard(author, title, pages, read) {
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("deleteButton");
   deleteButton.textContent = "Delete";
+  deleteButton.addEventListener("click", function () {
+    bookCards.removeChild(card);
+  });
   card.classList.add("card");
   card.innerHTML += `Author: ${author}<br>
     Title: ${title}<br>
